@@ -1,7 +1,7 @@
-from link_sheets import the_dataframe
+from link_sheets import df
 
 def main():
-	print(the_dataframe())
+	print(df())
 
 if __name__ == "__main__":
     main()

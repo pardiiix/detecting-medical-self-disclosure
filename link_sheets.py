@@ -20,7 +20,7 @@ Exact_Comments are the raw comments without any preprocessing
 Comments are to be preprocessed
 '''
 def df():
-	df = pd.DataFrame(columns = ['Exact_Comments','Comments', 'Labels'])
+	df = pd.DataFrame(columns = ['Exact_Comments','Comments', 'Labels', 'Embedding'])
 	df['Exact_Comments'] = df['Comments'] = whole_df["Comments"]
 	df["Labels"] = whole_df["Labels"]
 	return df

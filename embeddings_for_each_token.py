@@ -14,6 +14,8 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 import nltk
+import pickle
+
 
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
@@ -67,8 +69,6 @@ bert_model = SentenceTransformer('bert-base-nli-mean-tokens')
 comments = google_sheets_df()["Comments"]
 
 
-
-####################################################
 max_sent_len = 200
 max_vocab_size = 4000
 word_seq = [text_to_word_sequence(comment) for comment in comments]
@@ -99,3 +99,8 @@ for comment in word_seq:
 	print(my_list)
 	for token in my_list:
 		embeddings_dictionary[token[0]] = bert_model.encode(token)
+
+f = open("file.pkl","wb")
+pickle.dump(embeddings_dictionary,f)
+f.close()
+

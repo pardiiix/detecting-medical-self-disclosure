@@ -24,3 +24,4 @@ def df():
 	df['Exact_Comments'] = df['Comments'] = whole_df["Comments"]
 	df["Labels"] = whole_df["Labels"]
 	return df
+

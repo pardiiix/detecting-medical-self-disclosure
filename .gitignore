@@ -1,2 +1,7 @@
 others
 Pipfile*
+__pycache__
+wandb
+.idea
+*.pickle
+*.pkl

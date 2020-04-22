@@ -1,6 +1,6 @@
 others
 Pipfile*
-__pycache__
+__pycache__/
 wandb
 .idea
 *.pickle
